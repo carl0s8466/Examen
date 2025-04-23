@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: cbc-registry-servicio
+  profiles:
+    active: development
+  config:
+    import: optional:configserver:http://bustamante:carpio@localhost:7070

@@ -1,0 +1,29 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: cbc-catalogo-servicio
+          uri: lb://cbc-catalogo-servicio
+          predicates:
+            - Path=/categorias/**
+        - id: cbc-productos-servicio
+          uri: lb://cbc-productos-servicio
+          predicates:
+            - Path=/productos/**
+        - id: cbc-usuarios-servicio
+          uri: lb://cbc-usuarios-servicio
+          predicates:
+            - Path=/usuarios/**
