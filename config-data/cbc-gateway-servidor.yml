@@ -15,10 +15,10 @@ spring:
         locator:
           enable: true
       routes:
-        - id: cbc-catalogo-servicio
-          uri: lb://cbc-catalogo-servicio
+        - id: cbc-usuario-service
+          uri: lb://cbc-usuario-service
           predicates:
-            - Path=/categorias/**
+            - Path=/Usuario/**
         - id: cbc-productos-servicio
           uri: lb://cbc-productos-servicio
           predicates:
