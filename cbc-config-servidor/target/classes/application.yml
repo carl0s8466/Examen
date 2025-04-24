@@ -8,9 +8,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/
+          uri: https://github.com/carl0s8466/Examen
           searchPaths: config-data
-          default-label: mainTURAMADEGIT
+          default-label: main
   security:
     user:
       name: bustamante
